@@ -2,6 +2,8 @@
 import React from "react";
 import "./HomePage.css";
 import heroImg from "./image.png";
+import { useNavigate } from 'react-router-dom';
+
 
 // Import university logos from assets
 import logo1 from "./assets/anna.png";
@@ -12,7 +14,18 @@ import logo5 from "./assets/skcet.png";
 import FeatureHighlight from "./FeatureHighlight";
 import FeatureSection from "./FeatureSection";
 
+
+
 const HomePage = () => {
+  const navigate = useNavigate(); // ✅ moved inside component
+
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
+
+  const handleSignUpClick = () => {
+    navigate('/signup');
+  };
   return (
     <div className="home-container">
       <nav className="navbar">
@@ -26,9 +39,10 @@ const HomePage = () => {
           <a href="#">Resources ▾</a>
         </div>
         <div className="auth-buttons">
-          <button className="login">Login</button>
-          <button className="signup">Sign Up</button>
-        </div>
+  <button className="login" onClick={handleLoginClick}>Login</button>
+  <button className="signup" onClick={handleSignUpClick}>Sign Up</button>
+</div>
+
       </nav>
 
       <main className="main-content">
