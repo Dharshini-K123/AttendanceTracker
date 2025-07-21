@@ -1,0 +1,300 @@
+/* General Reset and Container */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+}
+
+.home-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo span {
+  color: #005eff;
+}
+
+.nav-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: #444;
+  font-size: 15px;
+}
+
+.auth-buttons a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.login {
+  color: #6b4bb6;
+}
+
+.signup {
+  background-color: #005eff;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+}
+
+/* Main Section */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 60px 0;
+  flex-wrap: wrap;
+}
+
+.text-section {
+  max-width: 600px;
+}
+
+.sub-heading {
+  color: #666;
+  font-size: 14px;
+}
+
+.main-content h1 {
+  font-size: 40px;
+  margin: 20px 0;
+  color: #111;
+}
+
+.blue {
+  color: #005eff;
+}
+
+.description {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.cta-button {
+  margin-top: 25px;
+  background-color: #005eff;
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.trust-text {
+  margin-top: 10px;
+  color: #444;
+  font-size: 14px;
+}
+
+.image-section img {
+  width: 500px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-section img:hover {
+  transform: scale(1.02);
+}
+
+
+/* University Logos Carousel Section */
+.university-logos {
+  text-align: center;
+  padding: 40px 0;
+
+}
+
+.university-logos p {
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #666;
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 50px;
+  animation: scroll 20s linear infinite;
+  width: fit-content;
+}
+
+.university-logo {
+  width: 120px;
+  height: auto;
+  margin: 0 15px;
+  border-radius: 10px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.university-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Animation for infinite scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Optional Horizontal Scroll Style (alternative to animation) */
+.slider-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.slider-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.slider-image-card {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.slider-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-image-card:hover {
+  transform: scale(1.05);
+}
+
+.slider-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 40px 0 20px;
+  color: #333;
+  font-weight: bold;
+}
+/* HomePage.css - Add these styles at bottom */
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logos-slider {
+  display: flex;
+  gap: 50px;
+  animation: scroll 20s linear infinite;
+  align-items: center;
+}
+
+.university-logo {
+  height: 100px;
+
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.university-logo:hover {
+  filter: grayscale(0%);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.cta-dual-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.signup-link {
+  color: #005eff;
+  text-decoration: underline;
+}
+/* Auth Buttons in Navbar */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between Login and Sign Up buttons */
+}
+
+.auth-buttons button {
+  font-size: 15px;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.auth-buttons .login {
+  background: none;
+  color: #6b4bb6;
+}
+
+.auth-buttons .signup {
+  background-color: #005eff;
+  color: white;
+}
+
+/* Role-Based Buttons in Main Section */
+.role-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.teacher-btn,
+.student-btn {
+  background-color: #005eff;
+  color: white;
+  padding: 12px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.teacher-btn:hover,
+.student-btn:hover {
+  background-color: #003bbd;
+}

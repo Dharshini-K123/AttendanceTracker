@@ -1,0 +1,45 @@
+.features-wrapper {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.feature-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-item.reverse .feature-image {
+  margin-left: 150px; /* Shift second image slightly right */
+}
+
+.feature-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-text {
+  max-width: 500px;
+}
+
+.feature-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.feature-text p {
+  font-size: 1.1rem;
+  color: #555;
+  white-space: pre-line;
+}
